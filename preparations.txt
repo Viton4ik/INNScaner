@@ -1,0 +1,110 @@
+1. Webpack/React installation
+
+- npm init -y
+
+- npm install webpack webpack-cli
+
+- npm install @babel/core babel-loader @babel/preset-react @babel/preset-env
+
+- package.json: добавим в объект:
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack"
+    or
+    "start": "webpack --mode-development --watch",
+    "build": "webpack --mode-production"
+
+- создадим файл с названием webpack.config.js:
+    module.exports = {
+    entry: "./src/index.js",
+    output: {
+        path: path.join(__dirname, "/dist"),
+        filename: "index.js",
+        publicPath: '/',   -чтобы гарантировать, что все ресурсы будут ссылаться на корневой путь
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,              // test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ["@babel/preset-react"]
+                      }
+                }
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"]
+            }
+        ]
+    }
+    }
+
+- npm install react react-dom
+
+- npm install style-loader css-loader
+
+- src/index.js to be created
+
+- src/index.html to be created with (<div id="root"></div>)
+
+- .babelrc file to be created
+    {
+    "presets": ["@babel/preset-env", "@babel/preset-react"]
+    }
+
+- npm i html-webpack-plugin
+
+    for webpack.config.js ->
+    const path = require('path');
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+    plugins: [
+            new HtmlWebpackPlugin({
+                template: "./src/index.html"
+            })
+        ],
+
+- create src/components/App.jsx
+- create src/components/App.css
+
+- npm install --save-dev webpack-dev-server
+
+    for webpack.config.js ->
+        devServer: {
+            port: 3000,
+            historyApiFallback: true,
+        },
+
+- npm install axios --save
+
+- npm install --save react-router-dom
+
+- npm install file-loader --save-dev
+(Он будет помещать файлы в папку images/ в выходном каталоге и устанавливать публичный путь для файлов как images/)
+
+    for webpack.config.js ->
+        module: {
+          rules: [
+            {
+              test: /\.(png|jpe?g|gif)$/i,
+              use: [
+                {
+                  loader: 'file-loader',
+                  options: {
+                    name: '[name].[ext]',
+                    outputPath: 'images/',
+                    publicPath: 'images/',
+                  },
+                },
+              ],
+            },
+          ],
+        }
+
+- npm start
+
+2.
+(- npm run build)
+

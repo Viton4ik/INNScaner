@@ -1,0 +1,16 @@
+.header {
+    width: 1440px;
+    height: 93px;
+    flex-shrink: 0;
+    background: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-color: black;
+}
+
+.logo {
+    background: url("http://localhost:3000/images/SGN_09_24_2022_1663968217400%201.png"), lightgray 50% / cover no-repeat;
+    /*margin: -24px 1239px -24px 60px;*/
+    margin: -24px 0px -24px 60px;
+}
