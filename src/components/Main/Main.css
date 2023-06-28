@@ -1,0 +1,41 @@
+
+
+main {
+    /*width: 1440px;*/
+    width: auto;
+    height: 2867px;
+    flex-shrink: 0;
+    background: #FFF;
+
+}
+
+.main-page-greetings {
+    display: grid;
+    /*grid-template-columns: repeat(2, 1fr);*/
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 620px;
+    margin: 117px 60px 109px 60px;
+
+    border: 2px solid #9445f3; /* temp*/
+
+}
+.main-page-greetings > div:nth-child(n) {
+    border: 1px solid #de0808; /* temp*/
+}
+
+.main-page-greetings-left {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+
+
+}
+
+.main-page-greetings-left > div:nth-child(n) {
+    border: 1px solid #04d760; /* temp*/
+}
+
+
+@media screen and (max-width: 670px) {
+
+
+}

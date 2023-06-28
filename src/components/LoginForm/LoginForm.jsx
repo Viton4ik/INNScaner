@@ -1,6 +1,6 @@
 import React from "react";
 
-// import ResultPage from "../ResultPage/ResultPage.jsx";
+import Header from "../Header/Header.jsx";
 
 // import { Routes, Route, Link } from "react-router-dom";
 
@@ -11,9 +11,10 @@ function LoginForm() {
 
 
     return(
-        <>
+        <div>
+            <Header />
             <h1>Login Form</h1>
-        </>
+        </div>
     );
 }
 

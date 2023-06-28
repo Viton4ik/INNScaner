@@ -103,6 +103,35 @@
           ],
         }
 
+- пакет svg-loader:
+    - npm install svg-loader --save-dev // не работает
+    или
+    - npm install @svgr/webpack --save-dev // не работает
+    или
+    - npm install svg-inline-loader --save-dev // не работает
+
+    for webpack.config.js ->
+        module: {
+          rules: [
+            // Другие правила...
+            {
+              test: /\.svg$/,
+              use: ['svg-loader'],  //npm install svg-loader --save-dev
+              use: ['@svgr/webpack'], //npm install @svgr/webpack --save-dev
+              loader: 'svg-inline-loader', //npm install svg-inline-loader --save-dev
+            },
+          ],
+        },
+
+- xmlns:xlink проблема  // не помогло
+    - npm install @babel/plugin-transform-react-jsx
+          - for .babelrc
+              plugins: [
+                ["@babel/plugin-transform-react-jsx", {
+                  "throwIfNamespace": false
+                }]
+              ]
+
 - npm start
 
 2.
