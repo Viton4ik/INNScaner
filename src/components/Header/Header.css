@@ -1,5 +1,6 @@
 header {
     width: auto;
+
     /*width: 1440px;*/
     height: 93px;
     /*flex-shrink: 0;*/
@@ -32,6 +33,7 @@ header {
     font-size: 14px;
     font-family: Inter, Serif;
     letter-spacing: 0.14px;
+
 }
 
 .middle-block > div:nth-child(2) {
@@ -47,6 +49,7 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
 }
 
 .right-block > div:nth-child(2) {

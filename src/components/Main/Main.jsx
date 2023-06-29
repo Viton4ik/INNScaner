@@ -3,14 +3,23 @@ import React from "react";
 
 import Header from "../Header/Header.jsx";
 import MainPic from '../media/MainPic.jsx';
+import MiddlePic from '../media/MiddlePic.jsx';
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+
+import rightIcon from '../media/right-icon.png';
+import leftIcon from '../media/left-icon.png';
+import clockIcon from '../media/icons-clock.png';
+import lensIcon from '../media/lens.png';
+import lockIcon from '../media/lock-icon.png';
+
 
 import "./Main.css";
 
 import {Link} from "react-router-dom";
+import logo from "../media/SGN_141_141.png";
 
 // import { Routes, Route, Link } from "react-router-dom";
 
@@ -20,17 +29,18 @@ function Main() {
     //     $('.single-item').slick();
     // });
 
-        const settings = {
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1
-        }
+        // const settings = {
+        //     dots: true,
+        //     infinite: true,
+        //     speed: 500,
+        //     slidesToShow: 3,
+        //     slidesToScroll: 1,
+        //
+        // }
 
     return(
         <main>
-
+            {/*<Header />*/}
             <div className={"main-page"}>
                 <Header className={"main-page-header"}/>
                 <div className={"main-page-greetings"}>
@@ -61,34 +71,69 @@ function Main() {
                     <div className={"main-page-whyWeAre-text"}>
                         <span>ПОЧЕМУ ИМЕННО МЫ</span>
                     </div>
+                    <div className={"main-page-whyWeAre-carousel-container"}>
+                        <div>
+                            <img src={leftIcon} alt="leftIcon"/>
+                            {/*<button type="button" className="slick-prev">Previous</button>*/}
+                        </div>
+                        <div className={"main-page-whyWeAre-carousel-container-slider"}>
 
-                    {/*<Slider {...settings}>*/}
-                    {/*    <div>*/}
-                    {/*        <h3>Slide 1</h3>*/}
-                    {/*    </div>*/}
-                    {/*    <div>*/}
-                    {/*        <h3>Slide 2</h3>*/}
-                    {/*    </div>*/}
-                    {/*    <div>*/}
-                    {/*        <h3>Slide 3</h3>*/}
-                    {/*    </div>*/}
-                    {/*</Slider>*/}
-                    <div className={"main-page-whyWeAre-carousel"}>
+                            <div className={"slide"}>
+                                <div>
+                                    <img src={clockIcon} alt="clockIcon"/>
+                                </div>
+                                <div className={"slide-text"}>Высокая и оперативная скорость обработки заявки</div>
+                            </div>
+                            <div className={"slide"}>
+                                <div>
+                                    <img src={lensIcon} alt="lensIcon"/>
+                                </div>
+                                <div className={"slide-text"}>Огромная комплексная база данных, обеспечивающая объективный ответ на запрос</div>
+                            </div>
+                            <div className={"slide"}>
+                                <div>
+                                    <img src={lockIcon} alt="lockIcon"/>
+                                </div>
+                                <div className={"slide-text"}>Защита конфеденциальных сведений, не подлежащих разглашению по федеральному законодательству</div>
+                            </div>
+
+                            {/*<Slider {...settings}>*/}
+                            {/*    <div>*/}
+                            {/*        <h3>Slide 1</h3>*/}
+                            {/*    </div>*/}
+                            {/*    <div>*/}
+                            {/*        <h3>Slide 2</h3>*/}
+                            {/*    </div>*/}
+                            {/*    <div>*/}
+                            {/*        <h3>Slide 3</h3>*/}
+                            {/*    </div>*/}
+                            {/*    <div>*/}
+                            {/*        <h3>Slide 4</h3>*/}
+                            {/*    </div>*/}
+                            {/*    <div>*/}
+                            {/*        <h3>Slide 5</h3>*/}
+                            {/*    </div>*/}
+                            {/*</Slider>*/}
+                        </div>
+                        <div>
+                            {/*<button type="button" className="slick-next">Next</button>*/}
+                            <img src={rightIcon} alt="rightIcon"/>
+                        </div>
 
                     </div>
                 </div>
 
-                <div className={"main-page-pic-middle"}>
-
+                <div className={"main-page-pic-middle-container"}>
+                    <MiddlePic className={"main-page-pic-middle"}/>
                 </div>
                 <div className={"main-page-prices"}>
                     <div className={"main-page-prices-details"}>
 
                     </div>
                 </div>
-                <div className={"footer"}>
+                {/*<div className={"footer"}>*/}
 
-                </div>
+                {/*</div>*/}
 
             </div>
 
