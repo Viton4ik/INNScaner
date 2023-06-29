@@ -123,7 +123,7 @@
           ],
         },
 
-- xmlns:xlink проблема  // не помогло
+- xmlns:xlink проблема  // не помогло, просто убрал xlink везде в svg и все заработало
     - npm install @babel/plugin-transform-react-jsx
           - for .babelrc
               plugins: [
@@ -131,6 +131,9 @@
                   "throwIfNamespace": false
                 }]
               ]
+
+- npm install slick-carousel  //https://github.com/kenwheeler/slick/
+- npm install react-slick
 
 - npm start
 

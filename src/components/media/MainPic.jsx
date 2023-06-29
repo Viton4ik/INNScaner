@@ -5,7 +5,8 @@ function MainPic() {
 
     return(
         <div>
-            <svg width="629" height="620" viewBox="0 0 629 620" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xlink">
+            {/*<svg width="629" height="620" viewBox="0 0 629 620" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xlink">*/}
+            <svg width="100%" height="620" viewBox="0 0 629 620" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xlink">
                 <rect y="27" width="629" height="593" fill="url(#pattern0)"/>
                 <rect x="538" width="69" height="73" fill="white"/>
                 <defs>
