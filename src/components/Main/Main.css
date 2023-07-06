@@ -554,6 +554,13 @@ main {
             /*display: flex;*/
             /*justify-content: center;*/
         }
+        .main-page-greetings-left {
+            /*display: grid;*/
+            /*!* grid-template-rows: repeat(3, 1fr); *!*/
+            /*grid-template-rows: 64% 10% 36%;*/
+            /*z-index: 2;*/
+            min-width: 680px;
+        }
 }
 
 
